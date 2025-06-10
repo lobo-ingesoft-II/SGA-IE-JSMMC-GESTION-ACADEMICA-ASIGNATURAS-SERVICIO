@@ -17,7 +17,7 @@
 
 * Mejora en la validación de datos para nombres nulos en las asignaturas.
 
-## \[1.1.0] - 2025-06-10
+## \[1.0.2] - 2025-06-10
 
 ### Agregado
 
@@ -25,3 +25,15 @@
 * Endpoint **GET** `/asignacion_asignaturas/{id_asignacion}` para obtener una asignación por su ID.
 * Endpoint **GET** `/asignacion_asignaturas/` para listar todas las asignaciones de asignaturas.
 * Integración de modelos y esquemas para la gestión de asignaciones de asignaturas.
+
+## \[1.0.3] - 2025-06-10
+
+### Agregado
+
+* Sección de documentación interactiva en README.md.
+
+### Corregido
+
+* Puerto en README.md
+* Versiones en Changelog
+* FKs en modelo asignacion_asignaturas

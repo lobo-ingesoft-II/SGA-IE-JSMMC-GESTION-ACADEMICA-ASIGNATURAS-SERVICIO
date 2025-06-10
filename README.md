@@ -165,7 +165,7 @@ Este servicio permite gestionar las asignaturas dentro del sistema académico, t
 3. Ejecuta el servidor:
 
      ```bash
-     uvicorn app.main:app --reload
+     uvicorn app.main:app --reload --port 8001
      ```
 
 ## Pruebas
@@ -181,6 +181,10 @@ pytest app/tests/test_asignaturas.py
 * **FastAPI**: Framework principal.
 * **SQLAlchemy**: ORM para manejar la base de datos.
 * **Pytest**: Framework para pruebas unitarias.
+
+## Documentación interactiva
+
+Accede a la documentación Swagger en [http://localhost:8001/docs](http://localhost:8001/docs) o ReDoc en [http://localhost:8001/redoc](http://localhost:8001/redoc).
 
 ## Contacto
 
