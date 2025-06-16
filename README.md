@@ -118,7 +118,8 @@ Este servicio permite gestionar las asignaturas dentro del sistema académico, t
   "id_asignacion": 1,
   "id_curso": 1,
   "id_asignatura": 1,
-  "id_profesor": 1
+  "id_profesor": 1,
+    "estudiantes": [1, 2, 3]
 }
 ```
 
@@ -144,13 +145,15 @@ Este servicio permite gestionar las asignaturas dentro del sistema académico, t
     "id_asignacion": 1,
     "id_curso": 1,
     "id_asignatura": 1,
-    "id_profesor": 1
+    "id_profesor": 1,
+      "estudiantes": [1, 2, 3]
   },
   {
     "id_asignacion": 2,
     "id_curso": 2,
     "id_asignatura": 2,
-    "id_profesor": 2
+    "id_profesor": 2,
+      "estudiantes": [1, 2, 3]
   }
 ]
 ```
