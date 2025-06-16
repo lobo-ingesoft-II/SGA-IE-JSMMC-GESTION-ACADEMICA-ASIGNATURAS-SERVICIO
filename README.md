@@ -14,7 +14,8 @@ Este servicio permite gestionar las asignaturas dentro del sistema académico, t
 
 ```json
 {
-    "nombre": "Matemáticas"
+    "nombre": "Matemáticas",
+    "estudiantes": [1, 2, 3]
 }
 ```
 
@@ -25,7 +26,8 @@ Este servicio permite gestionar las asignaturas dentro del sistema académico, t
 ```json
 {
     "id_asignatura": 1,
-    "nombre": "Matemáticas"
+    "nombre": "Matemáticas",
+    "estudiantes": [1, 2, 3]
 }
 ```
 
@@ -40,7 +42,8 @@ Este servicio permite gestionar las asignaturas dentro del sistema académico, t
 ```json
 {
     "id_asignatura": 1,
-    "nombre": "Matemáticas"
+    "nombre": "Matemáticas",
+    "estudiantes": [1, 2, 3]
 }
 ```
 
@@ -64,11 +67,13 @@ Este servicio permite gestionar las asignaturas dentro del sistema académico, t
 [
     {
         "id_asignatura": 1,
-        "nombre": "Matemáticas"
+        "nombre": "Matemáticas",
+        "estudiantes": [1, 2, 3]
     },
     {
         "id_asignatura": 2,
-        "nombre": "Historia"
+        "nombre": "Historia",
+        "estudiantes": [1, 2, 3]
     }
 ]
 ```

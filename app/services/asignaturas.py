@@ -2,8 +2,11 @@ from sqlalchemy.orm import Session
 from app.models.asignaturas import Asignatura
 from app.schemas.asignaturas import AsignaturaCreate
 
-def create_asignatura(db: Session, asignatura: AsignaturaCreate):
-    db_asignatura = Asignatura(**asignatura.dict())
+def create_asignatura(db, asignatura: AsignaturaCreate):
+    db_asignatura = Asignatura(
+        nombre=asignatura.nombre,
+        estudiantes=asignatura.estudiantes
+    )
     db.add(db_asignatura)
     db.commit()
     db.refresh(db_asignatura)
