@@ -1,3 +1,4 @@
+# schemas/asignacion_asignaturas.py
 from pydantic import BaseModel
 from typing import List
 
@@ -11,7 +12,6 @@ class AsignacionAsignaturaCreate(AsignacionAsignaturaBase):
 
 class AsignacionAsignaturaResponse(AsignacionAsignaturaBase):
     id_asignacion: int
-    estudiantes: List[int] = None
 
     class Config:
         orm_mode = True

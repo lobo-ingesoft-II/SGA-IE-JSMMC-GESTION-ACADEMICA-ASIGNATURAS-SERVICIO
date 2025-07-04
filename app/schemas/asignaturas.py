@@ -1,16 +1,18 @@
+# schemas/asignaturas.py
 from pydantic import BaseModel
-from typing import List
 
+# Clase base común
 class AsignaturaBase(BaseModel):
-    nombre: str | None
+    nombre: str
 
+# Esquema para crear asignaturas (lo que espera el POST)
 class AsignaturaCreate(AsignaturaBase):
-    estudiantes: List[int] = []
+    pass
 
-
+# Esquema de respuesta (lo que devuelve el servidor)
 class AsignaturaResponse(AsignaturaBase):
     id_asignatura: int
-    estudiantes: List[int] = []
 
     class Config:
         orm_mode = True
+
