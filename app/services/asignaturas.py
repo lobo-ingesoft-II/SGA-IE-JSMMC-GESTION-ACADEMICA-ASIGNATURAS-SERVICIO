@@ -3,7 +3,9 @@ from app.models.asignaturas import Asignatura
 from app.schemas.asignaturas import AsignaturaCreate
 
 def create_asignatura(db: Session, asignatura: AsignaturaCreate):
-    db_asignatura = Asignatura(**asignatura.dict())
+    db_asignatura = Asignatura(
+        nombre=asignatura.nombre
+    )
     db.add(db_asignatura)
     db.commit()
     db.refresh(db_asignatura)
