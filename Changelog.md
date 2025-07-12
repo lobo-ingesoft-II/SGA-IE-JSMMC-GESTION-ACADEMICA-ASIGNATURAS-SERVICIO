@@ -31,6 +31,8 @@
 ### Agregado
 
 * Sección de documentación interactiva en README.md.
+* Ahora, al consultar una asignación de asignatura, la respuesta incluye la lista de IDs de estudiantes inscritos en la  asignatura asociada (`estudiantes`).
+
 
 ### Corregido
 

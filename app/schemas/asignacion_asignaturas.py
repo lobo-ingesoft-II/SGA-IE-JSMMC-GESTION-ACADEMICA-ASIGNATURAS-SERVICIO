@@ -1,4 +1,6 @@
+# schemas/asignacion_asignaturas.py
 from pydantic import BaseModel
+from typing import List
 
 class AsignacionAsignaturaBase(BaseModel):
     id_curso: int
@@ -10,6 +12,12 @@ class AsignacionAsignaturaCreate(AsignacionAsignaturaBase):
 
 class AsignacionAsignaturaResponse(AsignacionAsignaturaBase):
     id_asignacion: int
+
+    class Config:
+        orm_mode = True
+
+class AsignaturaNombreResponse(BaseModel):
+    nombre: str
 
     class Config:
         orm_mode = True
