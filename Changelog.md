@@ -39,3 +39,9 @@
 * Puerto en README.md
 * Versiones en Changelog
 * FKs en modelo asignacion_asignaturas
+
+## \[1.0.3] - 2025-07-14
+
+### Agregado
+
+* Ajustes de archivos para hacer observabilidad del servicio.
