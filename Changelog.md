@@ -40,8 +40,16 @@
 * Versiones en Changelog
 * FKs en modelo asignacion_asignaturas
 
-## \[1.0.3] - 2025-07-14
+## \[1.0.4] - 2025-07-14
 
 ### Agregado
 
 * Ajustes de archivos para hacer observabilidad del servicio.
+
+## \[1.0.5] - 2025-07-14
+
+### Agregado
+
+* Se agregan test para la asignaturas y asignacion_asignaturas:
+    * Casos de exito para creación de asignaturas, obtención de asignatura especifica y listado de asignaturas.
+    * Casos de error y exito para la creación de asignación de asignaturas, obtención de asignación de asignaturas y listado de asignacion de asignaturas.
