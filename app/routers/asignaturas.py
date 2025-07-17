@@ -9,6 +9,11 @@ from prometheus_client import Counter, Histogram, generate_latest, CONTENT_TYPE_
 import time
 from starlette.responses import Response
 from prometheus_client import CollectorRegistry, generate_latest
+from app.routers.asignacion_asignaturas import (
+    REQUEST_COUNT_ASIGNACION_ASIGNATURAS,
+    REQUEST_LATENCY_ASIGNACION_ASIGNATURAS,
+    ERROR_COUNT_ASIGNACION_ASIGNATURAS
+)
 
 
 router = APIRouter()
@@ -38,9 +43,16 @@ ERROR_COUNT_ASIGNATURAS_ROUTERS = Counter(
 @router.get("/custom_metrics")
 def custom_metrics():
     registry = CollectorRegistry()
+    # Registrar métricas de asignaturas
     registry.register(REQUEST_COUNT_ASIGNATURAS_ROUTERS)
     registry.register(REQUEST_LATENCY_ASIGNATURAS_ROUTERS)
     registry.register(ERROR_COUNT_ASIGNATURAS_ROUTERS)
+    
+    # Registrar métricas de asignacion_asignaturas
+    registry.register(REQUEST_COUNT_ASIGNACION_ASIGNATURAS)
+    registry.register(REQUEST_LATENCY_ASIGNACION_ASIGNATURAS)
+    registry.register(ERROR_COUNT_ASIGNACION_ASIGNATURAS)
+    
     return Response(generate_latest(registry), media_type=CONTENT_TYPE_LATEST)
 
 def get_db():
