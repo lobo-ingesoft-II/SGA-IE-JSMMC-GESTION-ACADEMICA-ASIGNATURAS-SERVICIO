@@ -11,11 +11,37 @@ from app.services.asignacion_asignaturas import get_nombres_asignaturas_por_prof
 from app.services.asignaturas import get_asignatura
 from app.db import SessionLocal
 
+# Librerias para Observabilidad
+from prometheus_client import Counter, Histogram
+
+
+
 router = APIRouter()
 
 # 🔧 URLs de las APIs externas
 API_CURSOS_URL = "http://127.0.0.1:8004/cursos"
 API_PROFESORES_URL = "http://127.0.0.1:8009/profesor"
+
+# Metricas 
+REQUEST_COUNT_ASIGNACION_ASIGNATURAS = Counter(
+    "http_requests_total_asignacion_asignaturas", 
+    "TOTAL PETICIONES HTTP router-asignaturas",
+    ["method", "endpoint"]
+)
+
+REQUEST_LATENCY_ASIGNACION_ASIGNATURAS = Histogram(
+    "http_request_duration_seconds_asignacion_asignaturas", 
+    "DURACION DE LAS PETICIONES router-asinaturas",
+    ["method", "endpoint"],
+    buckets=[0.1, 0.3, 1.0, 2.5, 5.0, 10.0]  
+)
+
+# 3. Errores por endpoint
+ERROR_COUNT_ASIGNACION_ASIGNATURAS = Counter(
+    "http_request_errors_total_asignacion_asignaturas",
+    "TOTAL ERRORES HTTP (status >= 400)",
+    ["endpoint", "method", "status_code"]
+)
 
 # 🔁 Generador de conexión a base de datos
 def get_db():

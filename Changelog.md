@@ -53,3 +53,9 @@
 * Se agregan test para la asignaturas y asignacion_asignaturas:
     * Casos de exito para creación de asignaturas, obtención de asignatura especifica y listado de asignaturas.
     * Casos de error y exito para la creación de asignación de asignaturas, obtención de asignación de asignaturas y listado de asignacion de asignaturas.
+
+## \[1.0.5] - 2025-07-17
+
+### Corregido
+
+* Se corrige monitoreo de router asignacion-asignaturas.
