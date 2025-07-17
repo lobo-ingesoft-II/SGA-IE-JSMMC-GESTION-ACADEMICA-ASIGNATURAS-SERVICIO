@@ -31,7 +31,7 @@ REQUEST_COUNT_ASIGNACION_ASIGNATURAS = Counter(
 
 REQUEST_LATENCY_ASIGNACION_ASIGNATURAS = Histogram(
     "http_request_duration_seconds_asignacion_asignaturas", 
-    "DURACION DE LAS PETICIONES router-asinaturas",
+    "DURACION DE LAS PETICIONES router-asignaturas",
     ["method", "endpoint"],
     buckets=[0.1, 0.3, 1.0, 2.5, 5.0, 10.0]  
 )
