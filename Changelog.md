@@ -31,9 +31,31 @@
 ### Agregado
 
 * Sección de documentación interactiva en README.md.
+* Ahora, al consultar una asignación de asignatura, la respuesta incluye la lista de IDs de estudiantes inscritos en la  asignatura asociada (`estudiantes`).
+
 
 ### Corregido
 
 * Puerto en README.md
 * Versiones en Changelog
 * FKs en modelo asignacion_asignaturas
+
+## \[1.0.4] - 2025-07-14
+
+### Agregado
+
+* Ajustes de archivos para hacer observabilidad del servicio.
+
+## \[1.0.5] - 2025-07-14
+
+### Agregado
+
+* Se agregan test para la asignaturas y asignacion_asignaturas:
+    * Casos de exito para creación de asignaturas, obtención de asignatura especifica y listado de asignaturas.
+    * Casos de error y exito para la creación de asignación de asignaturas, obtención de asignación de asignaturas y listado de asignacion de asignaturas.
+
+## \[1.0.5] - 2025-07-17
+
+### Corregido
+
+* Se corrige monitoreo de router asignacion-asignaturas.
