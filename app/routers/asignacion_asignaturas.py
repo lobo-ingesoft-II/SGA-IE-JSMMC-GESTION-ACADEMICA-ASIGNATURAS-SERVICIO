@@ -19,8 +19,8 @@ from prometheus_client import Counter, Histogram
 router = APIRouter()
 
 # 🔧 URLs de las APIs externas
-API_CURSOS_URL = "http://127.0.0.1:8004/cursos"
-API_PROFESORES_URL = "http://127.0.0.1:8009/profesor"
+API_CURSOS_URL = "http://sga-cursos-service:8004/cursos"
+API_PROFESORES_URL = "http://sga-autenticacion-service:8009/profesor"
 
 # Metricas 
 REQUEST_COUNT_ASIGNACION_ASIGNATURAS = Counter(

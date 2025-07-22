@@ -12,13 +12,15 @@ from app.routers.asignaturas import REQUEST_COUNT_ASIGNATURAS_ROUTERS, REQUEST_L
 app = FastAPI(title="ASIGNATURAS API")
 
 # Habilitar CORS
+#Configuración de CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Reemplaza con ["http://localhost:3000"] si deseas restringir
+    allow_origins=["*"],  # Permitir todas las orígenes
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["*"],  # Permitir todos los métodos HTTP
+    allow_headers=["*"],  # Permitir todos los encabezados
 )
+
 
 
 # Middleware para observabilidad

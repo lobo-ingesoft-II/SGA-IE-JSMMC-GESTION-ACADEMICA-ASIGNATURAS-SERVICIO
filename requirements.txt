@@ -2,7 +2,6 @@ fastapi==0.110.0
 uvicorn==0.22.0
 sqlalchemy==1.4.46
 pydantic==2.7.1
-pydantic-settings==2.2.1
 python-dotenv==1.0.0
 pymysql==1.1.1
 cffi==1.17.1
@@ -10,3 +9,9 @@ cryptography==45.0.3
 pycparser==2.22
 pytest
 prometheus-client
+python-jose[cryptography]==3.4.0
+pydantic-settings==2.1.0
+pydantic[email]
+pytest
+pytest-mock
+requests
